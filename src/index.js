@@ -3,8 +3,52 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import Worlds from './features/worlds/components/Worlds';
+import World from './features/worlds/components/World';
+import Core from './features/worlds/components/Core';
+import Beats from './features/worlds/components/Beats';
+import Art from './features/worlds/components/Art';
+import Videos from './features/worlds/components/Videos';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <App/>
+    ),
+    children: [
+      {
+        path: "worlds",
+        element: <Worlds />
+      },
+      {
+        path: "worlds/:id",
+        element: <World />,
+        children: [
+          {
+            index: true,
+            element: <Core />
+          },
+          {
+            path: "beats",
+            element: <Beats />
+          },
+          {
+            path: "art",
+            element: <Art />
+          },
+          {
+            path: "videos",
+            element: <Videos />
+          }
+        ]
+      }
+    ]
+  }
+]);
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -12,7 +56,7 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <RouterProvider router={router}/>
     </Provider>
   </React.StrictMode>
 );

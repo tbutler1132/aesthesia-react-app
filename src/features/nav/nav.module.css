@@ -1,0 +1,50 @@
+:root {
+    --border-primary: rgb(210, 208, 208);
+    --top-nav-height: 2rem;
+}
+
+.sidebarNav {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    box-shadow: 2px 0 4px rgb(0 0 0 / 4%);
+    border-right: 1px solid var(--border-primary);
+    position: fixed;
+    overflow: hidden;
+    top: 4rem
+}
+
+.logoContainer {
+    width: fit-content;
+    position: relative;
+    bottom: 1rem;
+}
+
+.sidebarLinkContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    text-align: left;
+    transition: .2s;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.sidebarLinkContainer:hover {
+    background-color: rgb(241, 239, 239);
+}
+
+.topNav {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: solid gainsboro;
+    position: fixed;
+    height: var(--top-nav-height);
+    width: 100%;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+}

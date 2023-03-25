@@ -1,0 +1,85 @@
+:root {
+    --top-nav-height: 2rem;
+}
+
+.card {
+    border: 1px solid gainsboro;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 3%);
+    border-radius: 5px;
+    width: 300px;
+}
+
+.card img {
+    object-fit: fill;
+    width: 98%;
+    height: 74%;
+    border-radius: 5px;
+    transition-duration: .5s;
+  }
+
+.worldsContainer {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    margin-top: 4rem;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.worldContainer {
+    padding-top: 2rem;
+    margin-top: 4rem;
+    min-height: 100vh;
+    height: calc(var(--vh, 1vh) * 100 - (var(--top-nav-height)));
+    float: right;
+    width: 80%;
+    right: 0;
+    background-color: rgb(246, 246, 246);
+    z-index: -1;
+    position: fixed;
+    overflow-y: scroll;
+}
+
+.audioCardsContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.worldHeader {
+    position: fixed;
+    right: 0;
+    width: 79.9%;
+    margin-top: 4.1rem;
+    background-color: white;
+    height: 4rem;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 4%);
+    border-bottom: 1px solid var(--border-primary);
+    text-align: left;
+}
+
+.artContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    padding-bottom: 10rem;
+}
+
+.artContainer img {
+    margin-top: 5rem;
+}
+
+.videosContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    padding-bottom: 10rem;
+}
+
+.videosContainer video {
+    margin-top: 5rem;
+}
