@@ -3,6 +3,11 @@
   font-family: "electrolize";
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .audioPlayer {
   position: fixed;
   float: right;

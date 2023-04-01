@@ -5,7 +5,7 @@ function TopNav() {
   return (
     <nav className={styles.topNav}>
       <div className={styles.logoContainer}>
-        <Link style={{textDecoration: "none", color: "black"}} to="/worlds">
+        <Link to="/worlds">
           <h1>Sancta Vasa</h1>
         </Link>
       </div>

@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const worldsApi = createApi({
   reducerPath: 'worldsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:1001/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_WORLDS_URL }),
   endpoints: (builder) => ({
     getWorlds: builder.query({
       query: () => `worlds`,
@@ -14,7 +14,7 @@ export const worldsApi = createApi({
       query: (id) => `worlds/${id}/beats`,
     }),
     getWorldArt: builder.query({
-      query: (id) => `worlds/${id}/art`
+      query: (id) => `worlds/${id}/artworks`
     }),
     getWorldVideos: builder.query({
       query: (id) => `worlds/${id}/videos`

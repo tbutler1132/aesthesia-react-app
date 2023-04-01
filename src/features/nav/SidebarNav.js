@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import styles from './nav.module.css'
 import { useParams, useLocation } from 'react-router-dom';
 
@@ -14,6 +14,11 @@ import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 function SidebarNav() {
   let { id } = useParams();
   let location = useLocation();
+  let [searchParams] = useSearchParams();
+
+  const worldTitle = searchParams.get("title").replace(/_/g," ")
+
+  const worldTitleParam = "title=" + worldTitle
 
   const currentPageParam = location.pathname.split('/')[location.pathname.split('/').length - 1]
 
@@ -47,8 +52,8 @@ function SidebarNav() {
 
   return (
     <nav className={styles.sidebarNav}>
-        <h1>World 1</h1>
-        <Link style={{color: currentPageParam === "1" ? "green" : "black",}} className={styles.sidebarLinkContainer} to={`/worlds/${id}`}>
+        <h1>{worldTitle}</h1>
+        <Link style={{color: currentPageParam === "1" ? "green" : "black",}} className={styles.sidebarLinkContainer} to={`/worlds/${id}?${worldTitleParam}`}>
           <PublicIcon />
           <span>Core</span>
         </Link>
@@ -59,7 +64,7 @@ function SidebarNav() {
               color: currentPageParam === el.key ? "green" : "black",
             }} 
             className={styles.sidebarLinkContainer} 
-            to={el.key}>
+            to={`${el.key}?${worldTitleParam}`}>
               {el.icon}
             <span>{el.message}</span>
           </Link>

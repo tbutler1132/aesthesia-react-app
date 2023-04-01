@@ -10,8 +10,8 @@ function Worlds() {
   if(isError) return <div>Error</div>
   return (
     <div className={styles.worldsContainer}>
-      {data.map(el => 
-        <WorldCard world={el} key={el.id}/>
+      {data.map(world => 
+        <WorldCard imageUrl={world.cover_art[0].file.asset.url} title={world.title} id={world._id} world={world} key={world._id}/>
       )}
     </div>
   )
