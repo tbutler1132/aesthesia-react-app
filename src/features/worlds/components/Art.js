@@ -13,7 +13,7 @@ function Art() {
     <div className={styles.worldContainer}>
       <div className={styles.artContainer}>
         {data.map(art => 
-          <img height={250} width={250} src={art.file.asset.url} alt=""/>
+          <img key={art._id} height={250} width={250} src={art.file.asset.url} alt=""/>
         )}
     </div>
     </div>

@@ -11,6 +11,34 @@ import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 // import MusicNoteIcon from '@mui/icons-material/MusicNote';
 // import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined';
 
+const links = [
+  {
+    key: "art",
+    message: "Art",
+    icon: <BrushIcon />
+  },
+  {
+    key: "videos",
+    message: "Videos",
+    icon: <OndemandVideoIcon />
+  },
+  // {
+  //   key: "beats",
+  //   message: "Beats",
+  //   icon: <NightlifeIcon />
+  // },
+  // {
+  //   key: "audio",
+  //   message: "Audio",
+  //   icon: <MusicNoteIcon />
+  // },
+  // {
+  //   key: "blog",
+  //   message: "Blog",
+  //   icon: <NoteAltOutlinedIcon />
+  // },
+]
+
 function SidebarNav() {
   let { id } = useParams();
   let location = useLocation();
@@ -22,38 +50,11 @@ function SidebarNav() {
 
   const currentPageParam = location.pathname.split('/')[location.pathname.split('/').length - 1]
 
-  const links = [
-    {
-      key: "art",
-      message: "Art",
-      icon: <BrushIcon />
-    },
-    {
-      key: "videos",
-      message: "Videos",
-      icon: <OndemandVideoIcon />
-    },
-    // {
-    //   key: "beats",
-    //   message: "Beats",
-    //   icon: <NightlifeIcon />
-    // },
-    // {
-    //   key: "audio",
-    //   message: "Audio",
-    //   icon: <MusicNoteIcon />
-    // },
-    // {
-    //   key: "blog",
-    //   message: "Blog",
-    //   icon: <NoteAltOutlinedIcon />
-    // },
-  ]
 
   return (
     <nav className={styles.sidebarNav}>
         <h1>{worldTitle}</h1>
-        <Link style={{color: currentPageParam === "1" ? "green" : "black",}} className={styles.sidebarLinkContainer} to={`/worlds/${id}?${worldTitleParam}`}>
+        <Link style={{color: currentPageParam !== "art" && currentPageParam !== "videos" ? "green" : "black",}} className={styles.sidebarLinkContainer} to={`/worlds/${id}?${worldTitleParam}`}>
           <PublicIcon />
           <span>Core</span>
         </Link>

@@ -13,7 +13,7 @@ function Videos() {
     <div className={styles.worldContainer}>
       <div className={styles.videosContainer}>
         {data.map(video => 
-          <video width="320" height="240" controls>
+          <video key={video._id} width="320" height="240" controls>
             <source src={video.file.asset.url} type="video/mp4" />
           </video>
         )}

@@ -1,5 +1,4 @@
 import SidebarNav from '../../nav/SidebarNav'
-import WorldHeader from './WorldHeader'
 import { Outlet } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { displayAudioPlayer } from '../../audioPlayer/audioPlayerSlice'
@@ -13,7 +12,6 @@ function World() {
         {audioPlayerVisible ? 
           <AudioPlayer />
         : null}
-        <WorldHeader />
         <Outlet />
     </div>
   )

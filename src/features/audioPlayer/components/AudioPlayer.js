@@ -6,7 +6,7 @@ function AudioPlayer() {
   console.log(source)
   return (
     <div className='audioPlayer'>
-        <audio src={source} style={{width: "100%"}} controls/>
+        <audio src={source} style={{width: "100%"}} controls autoPlay/>
     </div>
   )
 }
