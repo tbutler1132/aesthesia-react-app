@@ -2,6 +2,8 @@ import React from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import styles from './nav.module.css'
 import { useParams, useLocation } from 'react-router-dom';
+import { theme } from '../../app/themeSlice'
+import { useSelector } from 'react-redux'
 
 //MUI ICONS
 import PublicIcon from '@mui/icons-material/Public';
@@ -43,6 +45,7 @@ function SidebarNav() {
   let { id } = useParams();
   let location = useLocation();
   let [searchParams] = useSearchParams();
+  const currentTheme = useSelector(theme)
 
   const worldTitle = searchParams.get("title").replace(/_/g," ")
 
@@ -52,9 +55,9 @@ function SidebarNav() {
 
 
   return (
-    <nav data-mode='dark' className={styles.sidebarNav}>
+    <nav data-mode={currentTheme} className={styles.sidebarNav}>
         <h1>{worldTitle}</h1>
-        <Link style={{color: currentPageParam !== "art" && currentPageParam !== "videos" ? "green" : "white",}} className={styles.sidebarLinkContainer} to={`/worlds/${id}?${worldTitleParam}`}>
+        <Link style={{color: currentPageParam !== "art" && currentPageParam !== "videos" ? "green" : "inherit",}} className={styles.sidebarLinkContainer} to={`/worlds/${id}?${worldTitleParam}`}>
           <PublicIcon />
           <span>Core</span>
         </Link>
@@ -62,7 +65,7 @@ function SidebarNav() {
           <Link 
             key={el.key} 
             style={{
-              color: currentPageParam === el.key ? "green" : "white",
+              color: currentPageParam === el.key ? "green" : "inherit",
             }} 
             className={styles.sidebarLinkContainer} 
             to={`${el.key}?${worldTitleParam}`}>

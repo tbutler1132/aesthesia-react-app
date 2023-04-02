@@ -1,5 +1,3 @@
-
-
 .sidebarNav {
     display: flex;
     flex-direction: column;
@@ -11,7 +9,8 @@
     overflow: hidden;
     top: var(--top-nav-height);
     background-color: var(--background-color);
-    color: var(--color)
+    color: var(--color);
+    transition: .25s;
 }
 
 .sidebarLinkContainer {
@@ -43,6 +42,7 @@
     display: flex;
     background-color: var(--background-color);
     color: var(--color);
+    transition: .25s;
 }
 
 .topNavLinksContainer {
@@ -54,6 +54,14 @@
     display: flex;
     width: 30%;
     justify-content: flex-start;
+}
+
+#topNavSwitchContainer {
+    margin-top: 1rem;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .topNavLinkContainer {

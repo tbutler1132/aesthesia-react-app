@@ -65,6 +65,7 @@ a {
   border-radius: 5px;
   display: grid;
   grid-template-rows: 12rem 10rem;
+  transition: .5s;
 }
 
 .audioCardArtContainer {
