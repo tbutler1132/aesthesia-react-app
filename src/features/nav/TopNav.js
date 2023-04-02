@@ -33,7 +33,7 @@ function TopNav() {
       <div className={styles.topNavLinksContainer}>
         {links.map(link => 
         <div style={{textDecoration: location.pathname.substring(1) === link.key ? "underline" : "none"}} key={link.key} className={styles.topNavLinkContainer}>
-          <Link to={link.key}>{link.message}</Link>  
+          <Link onClick={clickHandler} to={link.key}>{link.message}</Link>  
         </div>
         )}
       </div>

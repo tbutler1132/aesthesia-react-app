@@ -16,6 +16,12 @@
   position: absolute;
 } */
 
+#modalCloseButtonContainer {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
 body {
   color: var(--color);
   background-color: var(--background-color);

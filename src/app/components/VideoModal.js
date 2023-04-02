@@ -3,14 +3,15 @@ import Modal from "@mui/material/Modal"
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import { useDispatch } from 'react-redux';
 import { hide } from '../../features/audioPlayer/audioPlayerSlice';
+import Button from '@mui/material/Button'
 
 const style = {
-    marginTop: '4rem',
+    marginTop: '5rem',
     bgcolor: 'background.paper',
     boxShadow: 24,
     p: 4,
     display: 'flex',
-    justifyContent: "space-around"
+    justifyContent: "space-around",
   };
 
 function VideoModal({ url, thumbnail, header }) {
@@ -28,7 +29,10 @@ function VideoModal({ url, thumbnail, header }) {
             style={{zIndex: "3000"}}
             >
                 <div style={style}>
-                    <video style={{height: "90vh"}} controls>
+                    <div id="modalCloseButtonContainer">
+                        <Button onClick={handleClose} variant='contained' color='error'>Close</Button>
+                    </div>
+                    <video style={{height: "85vh"}} controls>
                         <source src={url} type="video/mp4" />
                     </video>
                 </div>
