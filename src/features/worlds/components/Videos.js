@@ -14,9 +14,9 @@ function Videos() {
     <div className={styles.worldContainer}>
       <div className="verticalCardsContainer">
         {data.map(video => 
-        <div style={{marginTop: "3rem"}}>
-        <VideoModal thumbnail={video._id} key={video._id} url={video.file.asset.url} />
-        </div>
+          <div key={video._id} style={{marginTop: "3rem"}}>
+            <VideoModal thumbnail={video._id} key={video._id} header={video.title} url={video.file.asset.url} />
+          </div>
         )}
       </div>
     </div>

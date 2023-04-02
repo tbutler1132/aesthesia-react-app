@@ -1,12 +1,31 @@
 :root {
   --border-primary: rgb(210, 208, 208);
   --top-nav-height: 4rem;
-  --primary-border: "gainsboro"
+  --primary-border: "gainsboro";
+  --background-color: white;
+  --color: black;
+}
+
+[data-mode='dark'] {
+  --background-color: black;
+  --color: white
+}
+
+/* #particles {
+  z-index: -100;
+  position: absolute;
+} */
+
+body {
+  color: var(--color);
+  background-color: var(--background-color);
 }
 
 .App {
   text-align: center;
   font-family: "electrolize";
+  color: var(--color);
+  background-color: var(--background-color);
 }
 
 a {
@@ -73,5 +92,4 @@ a {
   align-items: center;
   height: fit-content;
   padding-bottom: 10rem;
-  border: solid;
 }

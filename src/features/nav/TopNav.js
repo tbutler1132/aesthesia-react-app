@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 import styles from './nav.module.css'
 import { useDispatch } from 'react-redux';
-import { useLocation } from "react-router-dom";
 import { hide } from '../../features/audioPlayer/audioPlayerSlice';
+import { useLocation } from "react-router-dom";
 
 const links = [
   {
