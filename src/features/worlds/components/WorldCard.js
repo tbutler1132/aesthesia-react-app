@@ -5,7 +5,7 @@ function WorldCard({ title, imageUrl, id }) {
   return (
     <div className={styles.card}>
         <Link style={{textDecoration: "none", color: "black"}} to={`${id}?title=${title.replace(/ /g,"_")}`}>
-            <img height="250" width="250" src={imageUrl} alt="" />
+            <img src={imageUrl} alt="" />
             <h3>{title}</h3>
         </Link>
     </div>

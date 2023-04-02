@@ -2,6 +2,7 @@ import styles from "../worlds.module.css"
 import { useGetWorldVideosQuery } from "../worldsAPI"
 import CircularProgress from "@mui/material/CircularProgress"
 import { useParams } from "react-router-dom"
+import VideoModal from "../../../app/components/VideoModal"
 
 function Videos() {
   const { id } = useParams()
@@ -11,11 +12,11 @@ function Videos() {
   if(isError) return <div className={styles.worldContainer}>Something Went wrong</div>
   return (
     <div className={styles.worldContainer}>
-      <div className={styles.videosContainer}>
+      <div className="verticalCardsContainer">
         {data.map(video => 
-          <video key={video._id} width="320" height="240" controls>
-            <source src={video.file.asset.url} type="video/mp4" />
-          </video>
+        <div style={{marginTop: "3rem"}}>
+        <VideoModal thumbnail={video._id} key={video._id} url={video.file.asset.url} />
+        </div>
         )}
       </div>
     </div>

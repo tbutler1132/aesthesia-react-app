@@ -12,6 +12,7 @@ import Core from './features/worlds/components/Core';
 import Beats from './features/worlds/components/Beats';
 import Art from './features/worlds/components/Art';
 import Videos from './features/worlds/components/Videos';
+import About from './features/about/components/About';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       <App/>
     ),
     children: [
+      {
+        path: "about",
+        element: <About />
+      },
       {
         path: "worlds",
         element: <Worlds />
