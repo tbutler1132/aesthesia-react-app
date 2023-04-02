@@ -1,7 +1,8 @@
 
 .card {
     border: 1px solid gainsboro;
-    background-color: white;
+    background-color: var(--background-color);
+    color: var(--color);
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 3%);
     border-radius: 5px;
     width: 300px;
@@ -24,6 +25,7 @@
     margin-right: auto;
     margin-top: var(--top-nav-height);
     padding: 1rem;
+    min-height: 100vh;
 }
 
 .worldContainer {
@@ -33,7 +35,7 @@
     float: right;
     width: 80%;
     right: 0;
-    background-color: rgb(246, 246, 246);
+    background-color: var(--secondary-background-color);
     z-index: -1;
     position: fixed;
     overflow-y: scroll;
@@ -47,7 +49,8 @@
 
 .worldHeader {
     width: 100%;
-    background-color: white;
+    background-color: var(--background-color);
+    color: var(--color);
     height: fit-content;
     box-shadow: 0 2px 4px rgb(0 0 0 / 4%);
     border-bottom: 1px solid var(--border-primary);

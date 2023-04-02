@@ -9,7 +9,9 @@
     border-right: 1px solid var(--border-primary);
     position: fixed;
     overflow: hidden;
-    top: var(--top-nav-height)
+    top: var(--top-nav-height);
+    background-color: var(--background-color);
+    color: var(--color)
 }
 
 .sidebarLinkContainer {
@@ -17,7 +19,7 @@
     justify-content: space-around;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: var(--color);
     text-align: left;
     transition: .2s;
     padding-top: 1rem;
@@ -25,7 +27,7 @@
 }
 
 .sidebarLinkContainer:hover {
-    background-color: rgb(241, 239, 239);
+    background-color: var(--secondary-background-color);
 }
 
 .topNav {
@@ -39,6 +41,8 @@
     top: 0;
     left: 0;
     display: flex;
+    background-color: var(--background-color);
+    color: var(--color);
 }
 
 .topNavLinksContainer {

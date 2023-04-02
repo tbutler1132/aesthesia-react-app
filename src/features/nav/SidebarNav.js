@@ -52,9 +52,9 @@ function SidebarNav() {
 
 
   return (
-    <nav className={styles.sidebarNav}>
+    <nav data-mode='dark' className={styles.sidebarNav}>
         <h1>{worldTitle}</h1>
-        <Link style={{color: currentPageParam !== "art" && currentPageParam !== "videos" ? "green" : "black",}} className={styles.sidebarLinkContainer} to={`/worlds/${id}?${worldTitleParam}`}>
+        <Link style={{color: currentPageParam !== "art" && currentPageParam !== "videos" ? "green" : "white",}} className={styles.sidebarLinkContainer} to={`/worlds/${id}?${worldTitleParam}`}>
           <PublicIcon />
           <span>Core</span>
         </Link>
@@ -62,7 +62,7 @@ function SidebarNav() {
           <Link 
             key={el.key} 
             style={{
-              color: currentPageParam === el.key ? "green" : "black",
+              color: currentPageParam === el.key ? "green" : "white",
             }} 
             className={styles.sidebarLinkContainer} 
             to={`${el.key}?${worldTitleParam}`}>

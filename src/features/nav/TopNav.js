@@ -24,8 +24,8 @@ function TopNav() {
   }
 
   return (
-    <nav className={styles.topNav}>
-      <div className={styles.logoContainer}>
+    <nav data-mode='dark' className={styles.topNav}>
+      <div>
         <Link onClick={clickHandler} to="/worlds">
           <h2>Sancta Vasa</h2>
         </Link>

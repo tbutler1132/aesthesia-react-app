@@ -10,7 +10,7 @@ function Art() {
   if(isLoading) return <div className={styles.worldContainer}><CircularProgress /></div>
   if(isError) return <div>Error</div>
   return (
-    <div className={styles.worldContainer}>
+    <div data-mode='dark' className={styles.worldContainer}>
       <div className={styles.artContainer}>
         {data.map(art => 
           <img key={art._id} height={250} width={250} src={art.file.asset.url} alt=""/>

@@ -3,12 +3,19 @@
   --top-nav-height: 4rem;
   --primary-border: "gainsboro";
   --background-color: white;
+  --secondary-background-color: rgb(246, 246, 246);
   --color: black;
 }
 
 [data-mode='dark'] {
   --background-color: black;
+  --secondary-background-color: rgb(41, 41, 41);
   --color: white
+}
+
+body {
+  background-color: black;
+  color: white
 }
 
 /* #particles {
@@ -36,7 +43,7 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--color);
 }
 
 .audioPlayer {
@@ -50,7 +57,8 @@ a {
 
 .audioCard {
   border: 1px solid gainsboro;
-  background-color: white;
+  background-color: var(--background-color);
+  color: var(--color);
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 3%);
   height: 23rem;
   width: 14rem;

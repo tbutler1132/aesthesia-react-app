@@ -11,7 +11,7 @@ function Videos() {
   if(isLoading) return <div className={styles.worldContainer}><CircularProgress /></div>
   if(isError) return <div className={styles.worldContainer}>Something Went wrong</div>
   return (
-    <div className={styles.worldContainer}>
+    <div data-mode='dark' className={styles.worldContainer}>
       <div className="verticalCardsContainer">
         {data.map(video => 
           <div key={video._id} style={{marginTop: "3rem"}}>
