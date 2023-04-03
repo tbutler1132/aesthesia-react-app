@@ -12,10 +12,6 @@ const links = [
   {
     key: "worlds",
     message: "Worlds",
-  },
-  {
-    key: "about",
-    message: "About",
   }
 ]
 
