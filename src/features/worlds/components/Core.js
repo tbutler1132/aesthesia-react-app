@@ -14,14 +14,18 @@ function Core() {
   const { data, isLoading, isError } = useGetWorldQuery(id)
   const currentTheme = useSelector(theme)
 
-  if(isLoading) return <div className={styles.worldContainer}><CircularProgress /></div>
   if(isError) return <div className={styles.worldContainer}>Something Went wrong</div>
   return (
     <div data-mode={currentTheme} className={styles.worldContainer}>
       <WorldHeader headerText={"The core is the basic concept for each world and will eventually develop into the final song"}/>
-      <div className="horizontalCardsContainer">
-        <AudioCard src={data.cores[0].file.asset.url} art={data.cover_art[0].file.asset.url} title={data.title} header={"Version: " + data.cores[0].version} date={data.cores[0]._createdAt}/>
-      </div>
+      {isLoading 
+        ? 
+          <CircularProgress /> 
+        : 
+          <div className="horizontalCardsContainer">
+            <AudioCard src={data.cores[0].file.asset.url} art={data.cover_art[0].file.asset.url} title={data.title} header={"Version: " + data.cores[0].version} date={data.cores[0]._createdAt}/>
+          </div>
+      }
     </div>
   )
 }

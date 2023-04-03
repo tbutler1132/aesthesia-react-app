@@ -14,7 +14,7 @@ function Art() {
   if(isError) return <div>Error</div>
   return (
     <div data-mode={currentTheme} className={styles.worldContainer}>
-      <div className={styles.artContainer}>
+      <div id={styles.artContainer}>
         {data.map(art => 
           <img key={art._id} height={250} width={250} src={art.file.asset.url} alt=""/>
         )}
