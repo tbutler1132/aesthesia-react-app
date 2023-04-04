@@ -13,6 +13,7 @@ import Beats from './features/worlds/components/Beats';
 import Art from './features/worlds/components/Art';
 import Videos from './features/worlds/components/Videos';
 import LandingPage from './features/landingPage/LandingPage';
+import ContactPage from './app/components/ContactPage';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       <App/>
     ),
     children: [
+      {
+        path: "contact",
+        element: <ContactPage />
+      },
       {
         path: "worlds",
         element: <Worlds />

@@ -108,3 +108,35 @@ a {
   height: fit-content;
   padding-bottom: 10rem;
 }
+
+#thesues {
+  border: solid;
+  padding: 1rem;
+  border-radius: .3rem;
+  font-family: 'Josefin Sans';
+  width: 50%;
+  margin: auto;
+}
+
+#landingPage {
+  width: 80%;
+  margin: auto;
+  min-height: 100vh;
+  height: fit-content;
+}
+
+#landingPage p {
+  animation: fadeIn 3s;
+}
+
+#whatIsSanctaVasa {
+  text-align: center;
+  border-bottom: solid;
+  border-color: var(--border-primary);
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
