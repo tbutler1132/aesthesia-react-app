@@ -35,8 +35,8 @@ function TopNav() {
   return (
     <nav data-mode={currentTheme} className={styles.topNav}>
       <div>
-        <Link onClick={clickHandler} to="/worlds">
-          <h2>Sancta Vasa</h2>
+        <Link onClick={clickHandler} to="/">
+          <h2>Aesthesia</h2>
         </Link>
       </div>
       <div className={styles.topNavLinksContainer}>

@@ -89,25 +89,27 @@ function LandingPage() {
       }} />
       <div id='landingPage'>
         <div id='welcome'>
-            <h1 style={{textAlign: 'center'}}>Welcone to Sancta Vasa</h1>
+            <h1 style={{textAlign: 'center'}}>Aesthesia</h1>
         </div>
         <div id='whatIsSanctaVasa'>
-            <h2>Sancta Vasa is a sonic universe. It is composed of many “worlds”, each of which consists of a “core” song as well as other elements such as artwork and videos.</h2>
+            <h2>The purpose of this project is to create a “sonic universe”. Aesthesia is composed of many “worlds”, each of which consists of a “core” song in addition to other elements such as artwork and videos.</h2>
         </div>
         <div id='whatIsACore'>
             <h3>Cores</h3>
-            <p>The core is the central component of each world. The core consists of a single track which represents the primary concept of the world. A key concept behind the “core” is that it does not always represent a finished track. The core can be iterated upon, especially as the rest of the world develops, until it becomes a complete and commercially viable track.</p>
+            <p>The core is the central component of each world. It consists of a single track representing the primary concept of the world. The core can be iterated upon, especially as the rest of the world develops, until it becomes a complete and commercially viable song.</p>
         </div>
         <div id='thesues'>
-            <p>“The Ship of Theseus” is a well know thought experiment that may further clarify how the world, core, and song are related. This thought experiment presents a scenario where a ship has all of it’s parts replaced in small increments over a long period of time. The question it poses is once every single part original part has been replaced, is it the same ship? One could argue yes, as the ship as a whole is a concept. In Sancta Vas, every world is a just a concept. What do we want to make the listener think and feel? </p>
+            <p>The Ship of Theseus is a thought experiment about whether an object which has had all of its original components replaced remains the same object. According to legend, Theseus, the mythical Greek founder-king of Athens, rescued the children of Athens from King Minos after slaying the minotaur and then escaped onto a ship going to Delos. Each year, the Athenians commemorated this by taking the ship on a pilgrimage to Delos to honor Apollo. A question was raised by ancient philosophers: After several centuries of maintenance, if each individual part of the Ship of Theseus was replaced, one at a time, was it still the same ship?
+
+This thought experiment highlights the relationship between a world and it’s core. The world is the essence of the song, what it wants the listener to think and feel. The core is the sum of components that create the experience. That is why the core can evolve, shift, and reshape.</p>
         </div>
         <div id='whatAreBranches'>
             <h3>Branches</h3>
-            <p>The next key concept in Sancta Vasa are known as “branches.” Branches are tracks that are offshoots of the core. They can small ideas that will eventually be integrated into the core, new ideas that completely replace the core, or something that just stands on its own. </p>
+            <p>A “core” can have many branches. A branch is an audio track that can consist small ideas that will eventually be integrated into the core, new ideas that completely replace the core, or something that branches off of the core and stands on its own.</p>
         </div>
         <div id='whatAreOtherElements'>
             <h3>Elements</h3>
-            <p>Outside of the core and it’s branches, there are many other media types that make a world. At the moment those consist of images and videos that build upon the world’s concept and titilate the senses. </p>
+            <p>In addition to the core and its branches, a world is made up of other elements such as videos and artwork.</p>
         </div>
       </div>
     </div>
