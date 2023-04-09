@@ -99,7 +99,9 @@ const particlesLoaded = useCallback(async container => {
         <h1>Worlds</h1>
         <div className="horizontalCardsContainer">
           {data.map(world => 
-            <WorldCard imageUrl={world.cover_art[0].file.asset.url} title={world.title} id={world._id} key={world._id}/>
+          <div style={{marginTop: '1rem'}}>
+              <WorldCard imageUrl={world.cover_art[0].file.asset.url} title={world.title} id={world._id} key={world._id}/>
+          </div>
           )}
         </div>
     </div>

@@ -1,3 +1,13 @@
+@font-face {
+  font-family: electrolize;
+  src: url(../public//assets/fonts/Electrolize-Regular.ttf);
+}
+
+@font-face {
+  font-family: JosefinSans;
+  src: url(../public/assets/fonts/JosefinSans-VariableFont_wght.ttf);
+}
+
 :root {
   --border-primary: rgb(210, 208, 208);
   --top-nav-height: 4rem;
@@ -99,6 +109,13 @@ a {
   display: flex;
   justify-content: space-around;
   padding: 1rem;
+}
+
+@media (max-width: 900px) {
+  .horizontalCardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .verticalCardsContainer {

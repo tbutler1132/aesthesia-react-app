@@ -7,6 +7,7 @@ import Switch from '@mui/material/Switch'
 import { setTheme } from "../../app/themeSlice";
 import { theme } from "../../app/themeSlice";
 import { useSelector } from "react-redux";
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const links = [
   {
@@ -47,7 +48,7 @@ function TopNav() {
         )}
       </div>
       <div id={styles.topNavSwitchContainer}>
-        <span>Dark Mode</span>
+        <DarkModeIcon />
         <Switch onChange={switchChangeHandler} color="warning"/>
       </div>
     </nav>

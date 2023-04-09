@@ -1,8 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-
 export const worldsApi = createApi({
   reducerPath: 'worldsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_WORLDS_URL }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.NODE_ENV === 'production' ?  'https://aesthesia-server.herokuapp.com/' : 'http://localhost:3001/'}),
   endpoints: (builder) => ({
     getWorlds: builder.query({
       query: () => `worlds`,
