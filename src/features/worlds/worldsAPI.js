@@ -17,6 +17,9 @@ export const worldsApi = createApi({
     }),
     getWorldVideos: builder.query({
       query: (id) => `worlds/${id}/videos`
+    }),
+    getWorldBranches: builder.query({
+      query: (id) =>`worlds/${id}/branches`
     })
   }),
 })
@@ -26,5 +29,6 @@ export const {
     useGetWorldQuery,
     useGetWorldBeatsQuery,
     useGetWorldArtQuery,
-    useGetWorldVideosQuery
+    useGetWorldVideosQuery,
+    useGetWorldBranchesQuery
 } = worldsApi

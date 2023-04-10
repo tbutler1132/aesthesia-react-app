@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux'
 import PublicIcon from '@mui/icons-material/Public';
 import BrushIcon from '@mui/icons-material/Brush';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import ScatterPlotIcon from '@mui/icons-material/ScatterPlot';
 // import NightlifeIcon from '@mui/icons-material/Nightlife';
 // import MusicNoteIcon from '@mui/icons-material/MusicNote';
 // import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined';
@@ -24,6 +25,11 @@ const links = [
     message: "Videos",
     icon: <OndemandVideoIcon />
   },
+  {
+    key: "branches",
+    message: "Branches",
+    icon: <ScatterPlotIcon />
+  }
   // {
   //   key: "beats",
   //   message: "Beats",
@@ -57,7 +63,7 @@ function SidebarNav() {
   return (
     <nav data-mode={currentTheme} className={styles.sidebarNav}>
         <h1>{worldTitle}</h1>
-        <Link style={{color: currentPageParam !== "art" && currentPageParam !== "videos" ? "green" : "inherit",}} className={styles.sidebarLinkContainer} to={`/worlds/${id}?${worldTitleParam}`}>
+        <Link style={{color: currentPageParam !== "art" && currentPageParam !== "videos" && currentPageParam !== "branches" ? "green" : "inherit",}} className={styles.sidebarLinkContainer} to={`/worlds/${id}?${worldTitleParam}`}>
           <PublicIcon />
           <span>Core</span>
         </Link>

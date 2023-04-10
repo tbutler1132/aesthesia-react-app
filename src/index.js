@@ -12,6 +12,7 @@ import Core from './features/worlds/components/Core';
 import Beats from './features/worlds/components/Beats';
 import Art from './features/worlds/components/Art';
 import Videos from './features/worlds/components/Videos';
+import Branches from './features/worlds/components/Branches'
 import LandingPage from './features/landingPage/LandingPage';
 import ContactPage from './app/components/ContactPage';
 
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
           {
             path: "videos",
             element: <Videos />
+          },
+          {
+            path: "branches",
+            element: <Branches />
           }
         ]
       }
