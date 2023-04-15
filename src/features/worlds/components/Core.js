@@ -2,6 +2,7 @@ import React from 'react'
 import { useGetWorldQuery } from '../worldsAPI'
 import styles from "../worlds.module.css"
 import AudioCard from '../../../app/components/AudioCard'
+import AudioListItem from '../../../app/components/AudioListItem'
 import CircularProgress from '@mui/material/CircularProgress'
 import { useParams } from 'react-router-dom'
 import WorldHeader from './WorldHeader'
@@ -22,8 +23,9 @@ function Core() {
         ? 
           <CircularProgress /> 
         : 
-          <div className="horizontalCardsContainer">
-            <AudioCard src={data.cores[0].file.asset.url} art={data.cover_art[0].file.asset.url} title={data.title} header={"Version: " + data.cores[0].version} date={data.cores[0]._createdAt}/>
+          <div className="verticalCardsContainer">
+            <AudioListItem info={["Version: " + data.cores[0].version, data.cores[0]._createdAt]} art={data.cover_art[0].file.asset.url} header={data.title}/>
+            <AudioListItem info={["Version: " + data.cores[0].version, data.cores[0]._createdAt]} art={data.cover_art[0].file.asset.url} header={data.title}/>
           </div>
       }
     </div>
