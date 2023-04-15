@@ -9,6 +9,8 @@ function AudioListItem({ header, art, info, type }) {
         <div>
             {header}
         </div>
+        {info 
+        ? 
         <div className='listItemInfo' style={{display: 'flex', justifyContent: 'flex-end'}}>
             {info.map((el, idx) => 
             <span style={{marginLeft: "1rem"}}>
@@ -16,6 +18,7 @@ function AudioListItem({ header, art, info, type }) {
             </span>
             )}
         </div>
+        : null}
         {type 
             ?
                 <div className='listItemType'>

@@ -145,6 +145,7 @@ a {
   border-radius: 5px;
   border-color: var(--border-primary);
   justify-self: end;
+  padding: .2rem;
 }
 
 .listItem img {
@@ -204,4 +205,12 @@ a {
   position: fixed;
   min-height: 100vh;
   height: calc(var(--vh, 1vh) * 100 - (var(--top-nav-height)));
+}
+
+.listItemContainer {
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 1rem;
+  padding: 1rem;
+  justify-items: center;
 }
