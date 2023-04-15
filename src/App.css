@@ -135,9 +135,16 @@ a {
   padding: .5rem;
   width: 80%;
   display: grid;
-  grid-template-columns: 10% 20% 60%;
+  grid-template-columns: 10% 20% 50% 10%;
   text-align: left;
   align-items: center;
+}
+
+.listItemType {
+  border: solid;
+  border-radius: 5px;
+  border-color: var(--border-primary);
+  justify-self: end;
 }
 
 .listItem img {

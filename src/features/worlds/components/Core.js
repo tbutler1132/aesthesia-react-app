@@ -25,7 +25,7 @@ function Core() {
         : 
           <div className="verticalCardsContainer">
             <AudioListItem info={["Version: " + data.cores[0].version, data.cores[0]._createdAt]} art={data.cover_art[0].file.asset.url} header={data.title}/>
-            <AudioListItem info={["Version: " + data.cores[0].version, data.cores[0]._createdAt]} art={data.cover_art[0].file.asset.url} header={data.title}/>
+            <AudioListItem info={["Version: " + data.cores[0].version, data.cores[0]._createdAt]} art={data.cover_art[0].file.asset.url} header={data.title} type="Core"/>
           </div>
       }
     </div>

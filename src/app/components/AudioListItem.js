@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AudioListItem({ header, art, info }) {
+function AudioListItem({ header, art, info, type }) {
   return (
     <div className='listItem'>
         <div>
@@ -9,13 +9,21 @@ function AudioListItem({ header, art, info }) {
         <div>
             {header}
         </div>
-        <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+        <div className='listItemInfo' style={{display: 'flex', justifyContent: 'flex-end'}}>
             {info.map((el, idx) => 
             <span style={{marginLeft: "1rem"}}>
                 {el} 
             </span>
             )}
         </div>
+        {type 
+            ?
+                <div className='listItemType'>
+                    {type}
+                </div>
+            :
+                null
+        }
     </div>
   )
 }
