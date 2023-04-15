@@ -51,6 +51,24 @@
     padding: .5rem 0 .5rem 0;
 }
 
+#artCard {
+    border: solid;
+    width: 20rem;
+    height: 20rem;
+    margin-top: 1rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 3%);
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    padding: .1rem;
+}
+
+#artCard img {
+    height: 20rem;
+    width: 20rem;
+    object-fit: fill;
+    border-radius: 5px;
+}
+
 #artContainer {
     display: flex;
     flex-direction: column;
@@ -59,9 +77,6 @@
     padding-bottom: 10rem;
 }
 
-#artContainer img {
-    margin-top: 5rem;
-}
 
 .videosContainer {
     display: flex;

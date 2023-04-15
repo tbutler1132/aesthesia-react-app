@@ -16,7 +16,9 @@ function Art() {
     <div data-mode={currentTheme} className={styles.worldContainer}>
       <div id={styles.artContainer}>
         {data.map(art => 
-          <img key={art._id} height={250} width={250} src={art.file.asset.url} alt=""/>
+          <div id={styles.artCard}>
+            <img key={art._id} src={art.file.asset.url} alt=""/>
+          </div>
         )}
     </div>
     </div>
