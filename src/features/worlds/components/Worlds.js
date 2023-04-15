@@ -21,7 +21,7 @@ const particlesLoaded = useCallback(async container => {
     await console.log(container);
 }, []);
 
-  if(isLoading) return <div className={styles.worldContainer}><CircularProgress /></div>
+  if(isLoading) return <div className='mainContent'><CircularProgress /></div>
   if(isError) return <div>Error</div>
   return (
     <div className='mainContent'>
