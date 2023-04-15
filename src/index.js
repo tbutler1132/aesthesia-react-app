@@ -15,6 +15,7 @@ import Videos from './features/worlds/components/Videos';
 import Branches from './features/worlds/components/Branches'
 import LandingPage from './features/landingPage/LandingPage';
 import ContactPage from './app/components/ContactPage';
+import Updates from './features/updates/components/Updates';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage />
+      },
+      {
+        path: "updates",
+        element: <Updates />
       },
       {
         path: "worlds",

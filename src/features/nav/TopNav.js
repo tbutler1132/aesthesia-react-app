@@ -17,6 +17,10 @@ const links = [
   {
     key: "contact",
     message: "Contact"
+  },
+  {
+    key: "updates",
+    message: "Updates"
   }
 ]
 

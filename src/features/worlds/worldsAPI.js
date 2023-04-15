@@ -20,6 +20,9 @@ export const worldsApi = createApi({
     }),
     getWorldBranches: builder.query({
       query: (id) =>`worlds/${id}/branches`
+    }),
+    getWorldsUpdates: builder.query({
+      query: (total) => `worlds/updates/latest?total=${total}`
     })
   }),
 })
@@ -30,5 +33,6 @@ export const {
     useGetWorldBeatsQuery,
     useGetWorldArtQuery,
     useGetWorldVideosQuery,
-    useGetWorldBranchesQuery
+    useGetWorldBranchesQuery,
+    useGetWorldsUpdatesQuery
 } = worldsApi
