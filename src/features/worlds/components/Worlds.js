@@ -24,6 +24,7 @@ const particlesLoaded = useCallback(async container => {
   if(isLoading) return <div className={styles.worldContainer}><CircularProgress /></div>
   if(isError) return <div>Error</div>
   return (
+    <div className='mainContent'>
       <div className={styles.worldsContainer}>
         <Particles
         id="particles"
@@ -95,14 +96,15 @@ const particlesLoaded = useCallback(async container => {
               },
           },
           detectRetina: true,
-      }} />
-        <h1>Worlds</h1>
-        <div className="horizontalCardsContainer">
-          {data.map(world => 
-          <div style={{marginTop: '1rem'}}>
-              <WorldCard imageUrl={world.cover_art[0].file.asset.url} title={world.title} id={world._id} key={world._id}/>
-          </div>
-          )}
+        }} />
+            <h1>Worlds</h1>
+            <div className="horizontalCardsContainer">
+            {data.map(world => 
+            <div key={world._id} style={{marginTop: '1rem'}}>
+                <WorldCard imageUrl={world.cover_art[0].file.asset.url} title={world.title} id={world._id} key={world._id}/>
+            </div>
+            )}
+            </div>
         </div>
     </div>
   )

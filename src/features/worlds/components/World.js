@@ -7,12 +7,16 @@ import AudioPlayer from '../../audioPlayer/components/AudioPlayer'
 function World() {
   const audioPlayerVisible = useSelector(displayAudioPlayer)
   return (
-    <div>
+    <div className='mainContent'>
+      <div className='mainContentSideNavCol1'>
         <SidebarNav />
+      </div>
         {audioPlayerVisible ? 
           <AudioPlayer />
         : null}
-        <Outlet />
+        <div className='mainContentSideNavCol2'>
+          <Outlet />
+        </div>
     </div>
   )
 }

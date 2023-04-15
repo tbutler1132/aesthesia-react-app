@@ -157,3 +157,24 @@ a {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+.mainContent {
+  margin-top: var(--top-nav-height);
+}
+
+.mainContentSideNavCol1 {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  min-height: 100vh;
+  height: calc(var(--vh, 1vh) * 100 - (var(--top-nav-height)));
+}
+
+.mainContentSideNavCol2 {
+  width: 80%;
+  right: 0;
+  z-index: -1;
+  position: fixed;
+  min-height: 100vh;
+  height: calc(var(--vh, 1vh) * 100 - (var(--top-nav-height)));
+}

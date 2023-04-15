@@ -1,13 +1,10 @@
 .sidebarNav {
     display: flex;
     flex-direction: column;
-    width: 20%;
-    height: 100vh;
+    height: 100%;
     box-shadow: 2px 0 4px rgb(0 0 0 / 4%);
     border-right: 1px solid var(--border-primary);
-    position: fixed;
     overflow: hidden;
-    top: var(--top-nav-height);
     background-color: var(--background-color);
     color: var(--color);
     transition: .25s;

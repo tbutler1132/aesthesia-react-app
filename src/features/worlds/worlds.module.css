@@ -21,25 +21,17 @@
   }
 
 .worldsContainer {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: var(--top-nav-height);
     padding: 1rem;
     min-height: 100vh;
+    height: calc(var(--vh, 1vh) * 100 - (var(--top-nav-height)));
+    background-color: var(--background-color);
 }
 
 .worldContainer {
-    margin-top: var(--top-nav-height);
-    min-height: 100vh;
-    height: calc(var(--vh, 1vh) * 100 - (var(--top-nav-height)));
-    float: right;
-    width: 80%;
-    right: 0;
     background-color: var(--secondary-background-color);
-    z-index: -1;
-    position: fixed;
     overflow-y: scroll;
     transition: .25s;
+    height: 100%;
 }
 
 .audioCardsContainer {
