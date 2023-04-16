@@ -16,17 +16,17 @@ import ScatterPlotIcon from '@mui/icons-material/ScatterPlot';
 
 const links = [
   {
-    key: "art",
-    message: "Art",
+    key: "artwork",
+    message: "Artwork",
     icon: <BrushIcon />
   },
   {
-    key: "videos",
+    key: "video",
     message: "Videos",
     icon: <OndemandVideoIcon />
   },
   {
-    key: "branches",
+    key: "branch",
     message: "Branches",
     icon: <ScatterPlotIcon />
   }

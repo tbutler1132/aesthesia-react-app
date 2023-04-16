@@ -138,6 +138,7 @@ a {
   grid-template-columns: 10% 20% 50% 10%;
   text-align: left;
   align-items: center;
+  cursor: pointer;
 }
 
 .listItemType {

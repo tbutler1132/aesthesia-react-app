@@ -19,8 +19,8 @@ const links = [
     message: "Contact"
   },
   {
-    key: "updates",
-    message: "Updates"
+    key: "latest",
+    message: "Latest"
   }
 ]
 

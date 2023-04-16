@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         element: <ContactPage />
       },
       {
-        path: "updates",
+        path: "latest",
         element: <Updates />
       },
       {
@@ -49,19 +49,19 @@ const router = createBrowserRouter([
             element: <Core />
           },
           {
-            path: "beats",
+            path: "beat",
             element: <Beats />
           },
           {
-            path: "art",
+            path: "artwork",
             element: <Art />
           },
           {
-            path: "videos",
+            path: "video",
             element: <Videos />
           },
           {
-            path: "branches",
+            path: "branch",
             element: <Branches />
           }
         ]
